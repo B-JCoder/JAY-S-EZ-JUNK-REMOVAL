@@ -513,51 +513,63 @@ JUNK REMOVAL MADE EZ</div>
       </section>
 
       {/* Footer */}
-      <footer className="glass-card border-t border-white/10 py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL
-              </h3>
-              <p className="text-gray-300 mb-4">Professional junk removal services across DFW</p>
-              {/* <Badge className="neon-gradient text-black font-semibold px-3 py-1 rounded-full">Se Habla Español</Badge> */}
-            </div>
+    <footer className="glass-card border-t border-white/10 py-12">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-10">
+    <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+      {/* Logo + Description */}
+      <div className="text-center lg:text-left " >
+        <Image
+          src="/images/jay_slogo--removebg-preview.png"
+          alt="Logo"
+          width={130}
+          height={130}
+          className="rounded-full object-cover mx-auto lg:mx-0 "
+        />
+        <h3 className="text- font-bold text-white mb-2">
+          JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL
+        </h3>
+        <p className="text-gray-300">Professional junk removal services across DFW</p>
+      </div>
 
-            <div>
-              <h4 className="font-bold text-white mb-4">Services</h4>
-              <div className="space-y-2 text-gray-300">
-                <p>Junk Removal</p>
-                <p>Demolition</p>
-                <p>Dumpster Rental</p>
-                <p>Skid Steer Work</p>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-white mb-4">Contact</h4>
-              <div className="space-y-2 text-gray-300">
-                <p>214-258-3511</p>
-                <p>Jayson@jaysezjunkremoval.com</p>
-                <p>Red Oak, TX</p>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-white mb-4">Service Areas</h4>
-              <div className="space-y-2 text-gray-300">
-                <p>Red Oak, TX</p>
-                <p>Dallas, TX</p>
-                <p>All of DFW</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-white/10 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2025 Jay's EZ Junk Removal. All rights reserved.</p>
-          </div>
+      {/* Services */}
+      <div className="text-center lg:text-left">
+        <h4 className="font-bold text-white mb-4">Services</h4>
+        <div className="space-y-2 text-gray-300">
+          <p>Junk Removal</p>
+          <p>Demolition</p>
+          <p>Dumpster Rental</p>
+          <p>Skid Steer Work</p>
         </div>
-      </footer>
+      </div>
+
+      {/* Contact */}
+      <div className="text-center lg:text-left">
+        <h4 className="font-bold text-white mb-4">Contact</h4>
+        <div className="space-y-2 text-gray-300">
+          <p>214-258-3511</p>
+          <p>Jayson@jaysezjunkremoval.com</p>
+          <p>Red Oak, TX</p>
+        </div>
+      </div>
+
+      {/* Service Areas */}
+      <div className="text-center lg:text-left">
+        <h4 className="font-bold text-white mb-4">Service Areas</h4>
+        <div className="space-y-2 text-gray-300">
+          <p>Red Oak, TX</p>
+          <p>Dallas, TX</p>
+          <p>All of DFW</p>
+        </div>
+      </div>
+    </div>
+
+    {/* Footer Bottom */}
+    <div className="border-t border-white/10 mt-10 pt-6 text-center text-gray-300">
+      <p>&copy; 2025 Jay's EZ Junk Removal. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
     </div>
   )
 }
