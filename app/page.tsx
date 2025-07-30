@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+// import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -521,7 +521,7 @@ JUNK REMOVAL MADE EZ</div>
                 JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL
               </h3>
               <p className="text-gray-300 mb-4">Professional junk removal services across DFW</p>
-              <Badge className="neon-gradient text-black font-semibold px-3 py-1 rounded-full">Se Habla Español</Badge>
+              {/* <Badge className="neon-gradient text-black font-semibold px-3 py-1 rounded-full">Se Habla Español</Badge> */}
             </div>
 
             <div>

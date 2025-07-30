@@ -1,6 +1,6 @@
   import { Button } from "@/components/ui/button"
   import { Card, CardContent } from "@/components/ui/card"
-  import { Badge } from "@/components/ui/badge"
+  // import { Badge } from "@/components/ui/badge"
   import { Phone, Mail, MapPin, Truck, Home, Building2, Trash2, Hammer, CheckCircle, ArrowRight, Zap } from "lucide-react"
   import Link from "next/link"
   import { MobileNav } from "@/components/mobile-nav"
@@ -331,7 +331,7 @@
                   JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL
                 </h3>
                 <p className="text-gray-300 mb-4">Professional junk removal services across DFW</p>
-                <Badge className="neon-gradient text-black font-semibold px-3 py-1 rounded-full">Se Habla Español</Badge>
+                {/* <Badge className="neon-gradient text-black font-semibold px-3 py-1 rounded-full">Se Habla Español</Badge> */}
               </div>
 
               <div>
