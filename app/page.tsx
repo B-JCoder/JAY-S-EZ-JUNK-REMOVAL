@@ -68,7 +68,12 @@ export default function HomePage() {
             </div>
 
             {/* Mobile Navigation */}
-            <MobileNav />
+           <main className="relative">
+  <MobileNav />
+  
+</main>
+
+
           </div>
         </div>
       </header>
