@@ -33,10 +33,19 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               
-              <div className="text-2xl font-bold text-white">
-                
-                JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL
-              </div>
+            <div className="flex items-center space-x-2 text-2xl font-bold text-white">
+  <span>
+    {/* JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL */}
+  </span>
+  <Image
+    src="/images/jays-logo-updated.jpg"
+    alt="Logo"
+    width={50}
+    height={40}
+    className="rounded-full object-cover"
+  />
+</div>
+
               
             </div>
 
