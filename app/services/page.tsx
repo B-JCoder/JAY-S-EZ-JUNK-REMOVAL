@@ -8,6 +8,7 @@ import { AnimatedSection } from "@/components/animated-section"
 import { StaggeredAnimation } from "@/components/staggered-animation"
 import { ParallaxContainer } from "@/components/parallax-container"
 import { ParallaxBackground } from "@/components/parallax-background"
+import Image from "next/image"
 
 export default function ServicesPage() {
   const services = [
@@ -89,49 +90,52 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen gradient-bg text-white">
       {/* Header */}
-      <header className="glass-card sticky top-0 z-50 border-b border-white/10">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+       <header className="glass-card sticky top-0 z-50 border-b border-white/10">
+        <div className="container mx-auto px-6 py-2"> {/* reduced py from 4 to 2 */}
+          <div className="flex items-center justify-between h-[80px]"> {/* fixed height */}
+            {/* Logo Section */}
             <div className="flex items-center space-x-4">
-              <Link href="/" className="text-2xl font-bold text-white">
-                JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL
-              </Link>
-              <Badge className="neon-gradient text-black font-semibold px-3 py-1 rounded-full hidden sm:inline-block">
-                Se Habla Español
-              </Badge>
+              <div className="flex items-center space-x-2">
+                <Image
+                  src="/images/jay_slogo--removebg-preview.png"
+                  alt="Logo"
+                  width={130}
+                  height={130}
+                  className="rounded-full object-cover w-[130px] h-[130px]"
+                />
+              </div>
             </div>
-
+      
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-white hover:text-neon transition-colors font-medium relative group">
                 Home
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
               </Link>
-              <Link href="/#about" className="text-white hover:text-neon transition-colors font-medium relative group">
+              <Link href="#about" className="text-white hover:text-neon transition-colors font-medium relative group">
                 About Us
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
               </Link>
-              <Link href="/services" className="text-neon font-medium relative">
+              <Link href="/services" className="text-white hover:text-neon transition-colors font-medium relative group">
                 Services
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-neon"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
               </Link>
-              <Link
-                href="/#contact"
-                className="text-white hover:text-neon transition-colors font-medium relative group"
-              >
+              <Link href="#contact" className="text-white hover:text-neon transition-colors font-medium relative group">
                 Contact Us
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
               </Link>
             </nav>
-
+      
             {/* Desktop Contact Info */}
             <div className="hidden md:flex items-center space-x-3 text-neon font-bold">
               <Phone className="w-5 h-5" />
               <span className="text-lg">214-258-3511</span>
             </div>
-
-            {/* Mobile Navigation */}
-            <MobileNav />
+      
+            {/* Mobile Nav */}
+            <main className="relative md:hidden">
+              <MobileNav />
+            </main>
           </div>
         </div>
       </header>
@@ -158,17 +162,14 @@ export default function ServicesPage() {
           {/* Floating background elements */}
           <ParallaxContainer
             speed={0.5}
-            className="absolute top-20 left-10 w-20 h-20 bg-neon/10 rounded-full blur-2xl"
-          />
+            className="absolute top-20 left-10 w-20 h-20 bg-neon/10 rounded-full blur-2xl" children={undefined}          />
           <ParallaxContainer
             speed={0.7}
             direction="down"
-            className="absolute top-40 right-20 w-16 h-16 bg-blue-400/10 rounded-full blur-xl"
-          />
+            className="absolute top-40 right-20 w-16 h-16 bg-blue-400/10 rounded-full blur-xl" children={undefined}          />
           <ParallaxContainer
             speed={0.4}
-            className="absolute bottom-20 left-1/4 w-12 h-12 bg-green-400/10 rounded-full blur-lg"
-          />
+            className="absolute bottom-20 left-1/4 w-12 h-12 bg-green-400/10 rounded-full blur-lg" children={undefined}          />
         </div>
       </ParallaxBackground>
 
