@@ -50,7 +50,7 @@ useEffect(() => {
       {/* Mobile Menu Toggle Button */}
       <Button
         onClick={toggleMenu}
-        className="md:hidden fixed top-4 right-4 z-[60] glass-card text-white hover:neon-gradient hover:text-black border border-neon/30 p-2"
+        className="md:hidden fixed top-4 right-4 z-[60] glass-card text-white hover:neon-gradient border border-neon/30 p-7"
         size="sm"
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

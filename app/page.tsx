@@ -37,9 +37,9 @@ export default function HomePage() {
           <Image
             src="/images/logo.png"
             alt="Logo"
-            width={100}
-            height={100}
-            className="rounded-full object-cover w-[100px] h-[100px]"
+            width={130}
+            height={130}
+            className="rounded-full object-cover w-[130px] h-[130px]"
           />
         </div>
       </div>
