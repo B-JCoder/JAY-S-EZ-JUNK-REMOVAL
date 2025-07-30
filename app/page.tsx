@@ -28,66 +28,56 @@ export default function HomePage() {
   return (
     <div className="min-h-screen gradient-bg text-white">
       {/* Header */}
-      <header className="glass-card sticky top-0 z-50 border-b border-white/10">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              
-            <div className="flex items-center space-x-2 text-2xl font-bold text-white">
-  <span>
-    {/* JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL */}
-  </span>
-  <Image
-    src="/images/jays-logo-updated.jpg"
-    alt="Logo"
-    width={50}
-    height={40}
-    className="rounded-full object-cover"
-  />
-</div>
-
-              
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-white hover:text-neon transition-colors font-medium relative group">
-                Home
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
-              </Link>
-              <Link href="#about" className="text-white hover:text-neon transition-colors font-medium relative group">
-                About Us
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
-              </Link>
-              <Link
-                href="/services"
-                className="text-white hover:text-neon transition-colors font-medium relative group"
-              >
-                Services
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
-              </Link>
-              <Link href="#contact" className="text-white hover:text-neon transition-colors font-medium relative group">
-                Contact Us
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
-              </Link>
-            </nav>
-
-            {/* Desktop Contact Info */}
-            <div className="hidden md:flex items-center space-x-3 text-neon font-bold">
-              <Phone className="w-5 h-5" />
-              <span className="text-lg">214-258-3511</span>
-            </div>
-
-     
-   <main className="relative">
-            
-  <MobileNav />
-  
-</main>
-
-          </div>
+    <header className="glass-card sticky top-0 z-50 border-b border-white/10">
+  <div className="container mx-auto px-6 py-2"> {/* reduced py from 4 to 2 */}
+    <div className="flex items-center justify-between h-[80px]"> {/* fixed height */}
+      {/* Logo Section */}
+      <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
+          <Image
+            src="/images/logo.png"
+            alt="Logo"
+            width={100}
+            height={100}
+            className="rounded-full object-cover w-[100px] h-[100px]"
+          />
         </div>
-      </header>
+      </div>
+
+      {/* Desktop Navigation */}
+      <nav className="hidden md:flex items-center space-x-8">
+        <Link href="/" className="text-white hover:text-neon transition-colors font-medium relative group">
+          Home
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
+        </Link>
+        <Link href="#about" className="text-white hover:text-neon transition-colors font-medium relative group">
+          About Us
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
+        </Link>
+        <Link href="/services" className="text-white hover:text-neon transition-colors font-medium relative group">
+          Services
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
+        </Link>
+        <Link href="#contact" className="text-white hover:text-neon transition-colors font-medium relative group">
+          Contact Us
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
+        </Link>
+      </nav>
+
+      {/* Desktop Contact Info */}
+      <div className="hidden md:flex items-center space-x-3 text-neon font-bold">
+        <Phone className="w-5 h-5" />
+        <span className="text-lg">214-258-3511</span>
+      </div>
+
+      {/* Mobile Nav */}
+      <main className="relative md:hidden">
+        <MobileNav />
+      </main>
+    </div>
+  </div>
+</header>
+
       
 
       {/* Hero Section */}
