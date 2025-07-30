@@ -35,9 +35,7 @@ export default function HomePage() {
               <div className="text-2xl font-bold text-white">
                 JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL
               </div>
-              <Badge className="neon-gradient text-black font-semibold px-3 py-1 rounded-full hidden sm:inline-block">
-                Se Habla Español
-              </Badge>
+              
             </div>
 
             {/* Desktop Navigation */}
