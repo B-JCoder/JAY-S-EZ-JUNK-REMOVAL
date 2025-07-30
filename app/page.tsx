@@ -32,7 +32,9 @@ export default function HomePage() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
+              
               <div className="text-2xl font-bold text-white">
+                
                 JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL
               </div>
               
@@ -67,31 +69,37 @@ export default function HomePage() {
               <span className="text-lg">214-258-3511</span>
             </div>
 
-            {/* Mobile Navigation */}
-           <main className="relative">
+     
+   <main className="relative">
+            
   <MobileNav />
   
 </main>
 
-
           </div>
         </div>
       </header>
+      
 
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
+     <section className="py-10 md:py-20 relative overflow-hidden min-h-screen max-h-screen overflow-y-auto">
+
+
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-6xl lg:text-7xl font-black leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight">
+
+
                   JAY'S <span className="text-neon">EZ</span>
                   <br />
                   JUNK REMOVAL
                 </h1>
-                <div className="text-3xl lg:text-4xl font-bold text-neon">JUNK REMOVAL MADE EZ</div>
+                <div className="text-xl sm:text-2xl lg:text-4xl font-bold text-neon">
+JUNK REMOVAL MADE EZ</div>
                 <p className="text-xl text-gray-300 max-w-lg leading-relaxed">
                   Professional junk removal and demolition services across the DFW area. Fast, reliable, and affordable
                   solutions for residential and commercial clients.
