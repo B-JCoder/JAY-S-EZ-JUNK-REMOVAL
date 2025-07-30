@@ -20,54 +20,11 @@ import {
   Zap,
   Building2,
 } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { MobileNav } from "@/components/mobile-nav"
-import { AnimatedSection } from "@/components/animated-section"
-import { StaggeredAnimation } from "@/components/staggered-animation"
-import { ParallaxContainer } from "@/components/parallax-container"
-import { ParallaxBackground } from "@/components/parallax-background"
-import { Gallery } from "@/components/gallery"
 
 export default function HomePage() {
-  const galleryImages = [
-    {
-      src: "/images/junk-pile.jpg",
-      alt: "Large junk removal project",
-      title: "Complete Property Cleanout",
-      category: "Junk Removal",
-    },
-    {
-      src: "/images/skid-steer-dumpster.jpg",
-      alt: "Skid steer in action",
-      title: "Heavy Equipment Work",
-      category: "Skid Steer",
-    },
-    {
-      src: "/images/demolition-work.jpg",
-      alt: "Professional demolition",
-      title: "Interior Demolition",
-      category: "Demolition",
-    },
-    {
-      src: "/images/material-transport.jpg",
-      alt: "Material transport service",
-      title: "Material Hauling",
-      category: "Transport",
-    },
-    {
-      src: "/images/messy-room-before.jpg",
-      alt: "Property cleanout before",
-      title: "Before: Cluttered Space",
-      category: "Before/After",
-    },
-    {
-      src: "/images/truck-loaded-junk.jpg",
-      alt: "Loaded removal truck",
-      title: "Full Load Ready for Disposal",
-      category: "Junk Removal",
-    },
-  ]
-
   return (
     <div className="min-h-screen gradient-bg text-white">
       {/* Header */}
@@ -119,28 +76,23 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <ParallaxBackground className="py-20 min-h-screen flex items-center">
-        <div className="container mx-auto px-6 w-full">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+        <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
-            <AnimatedSection animation="fadeInLeft" className="space-y-8">
+            <div className="space-y-8">
               <div className="space-y-4">
-                <ParallaxContainer speed={0.2}>
-                  <h1 className="text-6xl lg:text-7xl font-black leading-tight">
-                    JAY'S <span className="text-neon">EZ</span>
-                    <br />
-                    JUNK REMOVAL
-                  </h1>
-                </ParallaxContainer>
-                <ParallaxContainer speed={0.3} direction="down">
-                  <div className="text-3xl lg:text-4xl font-bold text-neon">JUNK REMOVAL MADE EZ</div>
-                </ParallaxContainer>
-                <ParallaxContainer speed={0.1}>
-                  <p className="text-xl text-gray-300 max-w-lg leading-relaxed">
-                    Professional junk removal and demolition services across the DFW area. Fast, reliable, and
-                    affordable solutions for residential and commercial clients.
-                  </p>
-                </ParallaxContainer>
+                <h1 className="text-6xl lg:text-7xl font-black leading-tight">
+                  JAY'S <span className="text-neon">EZ</span>
+                  <br />
+                  JUNK REMOVAL
+                </h1>
+                <div className="text-3xl lg:text-4xl font-bold text-neon">JUNK REMOVAL MADE EZ</div>
+                <p className="text-xl text-gray-300 max-w-lg leading-relaxed">
+                  Professional junk removal and demolition services across the DFW area. Fast, reliable, and affordable
+                  solutions for residential and commercial clients.
+                </p>
               </div>
 
               <div className="flex items-center space-x-4 text-lg">
@@ -160,110 +112,91 @@ export default function HomePage() {
                   Book Estimate
                 </Button>
               </div>
-            </AnimatedSection>
+            </div>
 
             {/* Right Side - Visual Elements */}
-            <AnimatedSection animation="fadeInRight" delay={300} className="relative">
-              <ParallaxContainer speed={0.4} className="relative z-10">
-                <StaggeredAnimation staggerDelay={150} animation="scaleIn" className="grid grid-cols-2 gap-6">
-                  <Card className="glass-card p-6">
-                    <CardContent className="p-0 text-center">
-                      <Trash2 className="w-12 h-12 text-neon mx-auto mb-4" />
-                      <h3 className="font-bold text-white mb-2">Junk Removal</h3>
-                      <p className="text-gray-300 text-sm">Complete cleanouts</p>
-                    </CardContent>
-                  </Card>
-                  <Card className="glass-card p-6">
-                    <CardContent className="p-0 text-center">
-                      <Hammer className="w-12 h-12 text-neon mx-auto mb-4" />
-                      <h3 className="font-bold text-white mb-2">Demolition</h3>
-                      <p className="text-gray-300 text-sm">Professional demo</p>
-                    </CardContent>
-                  </Card>
-                  <Card className="glass-card p-6">
-                    <CardContent className="p-0 text-center">
-                      <Truck className="w-12 h-12 text-neon mx-auto mb-4" />
-                      <h3 className="font-bold text-white mb-2">Dumpster Rental</h3>
-                      <p className="text-gray-300 text-sm">Drop-off & pickup</p>
-                    </CardContent>
-                  </Card>
-                  <Card className="glass-card p-6">
-                    <CardContent className="p-0 text-center">
-                      <Zap className="w-12 h-12 text-neon mx-auto mb-4" />
-                      <h3 className="font-bold text-white mb-2">Skid Steer</h3>
-                      <p className="text-gray-300 text-sm">Heavy-duty work</p>
-                    </CardContent>
-                  </Card>
-                </StaggeredAnimation>
-              </ParallaxContainer>
-
-              {/* Floating background elements */}
-              <ParallaxContainer
-                speed={0.6}
-                direction="down"
-                className="absolute -top-10 -right-10 w-32 h-32 bg-neon/5 rounded-full blur-xl"
-              />
-              <ParallaxContainer
-                speed={0.8}
-                className="absolute -bottom-10 -left-10 w-24 h-24 bg-blue-500/5 rounded-full blur-xl"
-              />
-            </AnimatedSection>
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-6">
+                <Card className="glass-card p-6 floating-animation">
+                  <CardContent className="p-0 text-center">
+                    <Trash2 className="w-12 h-12 text-neon mx-auto mb-4" />
+                    <h3 className="font-bold text-white mb-2">Junk Removal</h3>
+                    <p className="text-gray-300 text-sm">Complete cleanouts</p>
+                  </CardContent>
+                </Card>
+                <Card className="glass-card p-6 floating-animation" style={{ animationDelay: "1s" }}>
+                  <CardContent className="p-0 text-center">
+                    <Hammer className="w-12 h-12 text-neon mx-auto mb-4" />
+                    <h3 className="font-bold text-white mb-2">Demolition</h3>
+                    <p className="text-gray-300 text-sm">Professional demo</p>
+                  </CardContent>
+                </Card>
+                <Card className="glass-card p-6 floating-animation" style={{ animationDelay: "2s" }}>
+                  <CardContent className="p-0 text-center">
+                    <Truck className="w-12 h-12 text-neon mx-auto mb-4" />
+                    <h3 className="font-bold text-white mb-2">Dumpster Rental</h3>
+                    <p className="text-gray-300 text-sm">Drop-off & pickup</p>
+                  </CardContent>
+                </Card>
+                <Card className="glass-card p-6 floating-animation" style={{ animationDelay: "3s" }}>
+                  <CardContent className="p-0 text-center">
+                    <Zap className="w-12 h-12 text-neon mx-auto mb-4" />
+                    <h3 className="font-bold text-white mb-2">Skid Steer</h3>
+                    <p className="text-gray-300 text-sm">Heavy-duty work</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
-      </ParallaxBackground>
+      </section>
 
       {/* Quick Intro/About */}
       <section id="about" className="py-16">
         <div className="container mx-auto px-6">
-          <AnimatedSection animation="fadeInUp">
-            <Card className="glass-card p-12 rounded-3xl">
-              <div className="text-center max-w-4xl mx-auto space-y-6">
-                <h2 className="text-4xl font-bold text-white mb-6">
-                  About <span className="text-neon">Jay's EZ Junk Removal</span>
-                </h2>
-                <p className="text-xl text-gray-300 leading-relaxed">
-                  Based in Red Oak, TX, we're your trusted local junk removal experts serving the entire DFW area. Our
-                  professional team provides fast, reliable, and affordable solutions for both residential and
-                  commercial clients.
-                </p>
-                <StaggeredAnimation staggerDelay={200} animation="fadeInUp" className="grid md:grid-cols-3 gap-8 mt-12">
-                  <div className="text-center">
-                    <MapPin className="w-8 h-8 text-neon mx-auto mb-3" />
-                    <h3 className="font-bold text-white mb-2">Local Experts</h3>
-                    <p className="text-gray-300">Based in Red Oak, TX</p>
-                  </div>
-                  <div className="text-center">
-                    <CheckCircle className="w-8 h-8 text-neon mx-auto mb-3" />
-                    <h3 className="font-bold text-white mb-2">Bilingual Support</h3>
-                    <p className="text-gray-300">English & Spanish</p>
-                  </div>
-                  <div className="text-center">
-                    <Clock className="w-8 h-8 text-neon mx-auto mb-3" />
-                    <h3 className="font-bold text-white mb-2">Fast Service</h3>
-                    <p className="text-gray-300">Same-day available</p>
-                  </div>
-                </StaggeredAnimation>
+          <Card className="glass-card p-12 rounded-3xl">
+            <div className="text-center max-w-4xl mx-auto space-y-6">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                About <span className="text-neon">Jay's EZ Junk Removal</span>
+              </h2>
+              <p className="text-xl text-gray-300 leading-relaxed">
+                Based in Red Oak, TX, we're your trusted local junk removal experts serving the entire DFW area. Our
+                professional team provides fast, reliable, and affordable solutions for both residential and commercial
+                clients.
+              </p>
+              <div className="grid md:grid-cols-3 gap-8 mt-12">
+                <div className="text-center">
+                  <MapPin className="w-8 h-8 text-neon mx-auto mb-3" />
+                  <h3 className="font-bold text-white mb-2">Local Experts</h3>
+                  <p className="text-gray-300">Based in Red Oak, TX</p>
+                </div>
+                <div className="text-center">
+                  <CheckCircle className="w-8 h-8 text-neon mx-auto mb-3" />
+                  <h3 className="font-bold text-white mb-2">Bilingual Support</h3>
+                  <p className="text-gray-300">English & Spanish</p>
+                </div>
+                <div className="text-center">
+                  <Clock className="w-8 h-8 text-neon mx-auto mb-3" />
+                  <h3 className="font-bold text-white mb-2">Fast Service</h3>
+                  <p className="text-gray-300">Same-day available</p>
+                </div>
               </div>
-            </Card>
-          </AnimatedSection>
+            </div>
+          </Card>
         </div>
       </section>
 
       {/* Featured Services */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <AnimatedSection animation="fadeInUp" className="text-center mb-12">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
               Our <span className="text-neon">Services</span>
             </h2>
             <p className="text-xl text-gray-300">Professional solutions for all your junk removal needs</p>
-          </AnimatedSection>
+          </div>
 
-          <StaggeredAnimation
-            staggerDelay={150}
-            animation="scaleIn"
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Trash2, title: "Junk Removal", desc: "Complete home & business cleanouts" },
               { icon: Building2, title: "Dumpster Rental", desc: "Drop-off & pickup included" },
@@ -281,49 +214,66 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             ))}
-          </StaggeredAnimation>
+          </div>
 
-          <AnimatedSection animation="fadeInUp" delay={600} className="text-center mt-12">
+          <div className="text-center mt-12">
             <Link href="/services">
               <Button className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300">
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 
       {/* Photo Gallery */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <AnimatedSection animation="fadeInUp" className="text-center mb-12">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
               Our <span className="text-neon">Work</span>
             </h2>
-            <p className="text-xl text-gray-300">Before & After Results - Click to view full size</p>
-          </AnimatedSection>
+            <p className="text-xl text-gray-300">Before & After Results</p>
+          </div>
 
-          <AnimatedSection animation="scaleIn" delay={200}>
-            <Gallery images={galleryImages} />
-          </AnimatedSection>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { src: "/images/junk-pile.jpg", alt: "Large junk removal project" },
+              { src: "/images/skid-steer-dumpster.jpg", alt: "Skid steer in action" },
+              { src: "/images/demolition-work.jpg", alt: "Professional demolition" },
+              { src: "/images/material-transport.jpg", alt: "Material transport service" },
+              { src: "/images/messy-room-before.jpg", alt: "Property cleanout before" },
+              { src: "/images/truck-loaded-junk.jpg", alt: "Loaded removal truck" },
+            ].map((image, index) => (
+              <Card
+                key={index}
+                className="glass-card overflow-hidden rounded-2xl group cursor-pointer hover:neon-glow transition-all duration-300"
+              >
+                <div className="aspect-square relative">
+                  <Image
+                    src={image.src || "/placeholder.svg"}
+                    alt={image.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Testimonials */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <AnimatedSection animation="fadeInUp" className="text-center mb-12">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
               What Our <span className="text-neon">Customers</span> Say
             </h2>
-          </AnimatedSection>
+          </div>
 
-          <StaggeredAnimation
-            staggerDelay={300}
-            animation="fadeInUp"
-            className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
-          >
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="glass-card p-8 rounded-2xl">
               <CardContent className="p-0">
                 <div className="flex mb-4">
@@ -351,51 +301,45 @@ export default function HomePage() {
                 <p className="font-bold text-neon">— Mike R., Red Oak</p>
               </CardContent>
             </Card>
-          </StaggeredAnimation>
+          </div>
         </div>
       </section>
 
       {/* Areas We Serve */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <AnimatedSection animation="fadeInUp">
-            <Card className="glass-card p-12 rounded-3xl">
-              <div className="text-center mb-8">
-                <h2 className="text-4xl font-bold text-white mb-4">
-                  Areas We <span className="text-neon">Serve</span>
-                </h2>
-                <p className="text-xl text-gray-300">Proudly serving the entire DFW metroplex</p>
-              </div>
+          <Card className="glass-card p-12 rounded-3xl">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Areas We <span className="text-neon">Serve</span>
+              </h2>
+              <p className="text-xl text-gray-300">Proudly serving the entire DFW metroplex</p>
+            </div>
 
-              <StaggeredAnimation
-                staggerDelay={80}
-                animation="fadeInUp"
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-center"
-              >
-                {[
-                  "Red Oak, TX",
-                  "Lancaster, TX",
-                  "Ennis, TX",
-                  "Waxahachie, TX",
-                  "Dallas, TX",
-                  "Cedar Hill, TX",
-                  "Duncanville, TX",
-                  "Wilmer, TX",
-                  "Arlington, TX",
-                  "Grand Prairie, TX",
-                  "All of DFW",
-                ].map((area, index) => (
-                  <div
-                    key={index}
-                    className="glass-card p-4 rounded-xl border border-neon/20 hover:border-neon transition-colors"
-                  >
-                    <MapPin className="w-5 h-5 text-neon mx-auto mb-2" />
-                    <span className="text-white font-medium">{area}</span>
-                  </div>
-                ))}
-              </StaggeredAnimation>
-            </Card>
-          </AnimatedSection>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
+              {[
+                "Red Oak, TX",
+                "Lancaster, TX",
+                "Ennis, TX",
+                "Waxahachie, TX",
+                "Dallas, TX",
+                "Cedar Hill, TX",
+                "Duncanville, TX",
+                "Wilmer, TX",
+                "Arlington, TX",
+                "Grand Prairie, TX",
+                "All of DFW",
+              ].map((area, index) => (
+                <div
+                  key={index}
+                  className="glass-card p-4 rounded-xl border border-neon/20 hover:border-neon transition-colors"
+                >
+                  <MapPin className="w-5 h-5 text-neon mx-auto mb-2" />
+                  <span className="text-white font-medium">{area}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
         </div>
       </section>
 
@@ -403,79 +347,77 @@ export default function HomePage() {
       <section id="contact" className="py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <AnimatedSection animation="fadeInUp" className="text-center mb-12">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Get Your <span className="text-neon">Free Estimate</span>
               </h2>
               <p className="text-xl text-gray-300">Ready to get started? Contact us today!</p>
-            </AnimatedSection>
+            </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <AnimatedSection animation="fadeInLeft" delay={200}>
-                <Card className="glass-card p-8 rounded-2xl">
-                  <CardContent className="p-0">
-                    <form className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-white font-semibold mb-2">Name *</label>
-                          <Input
-                            className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
-                            placeholder="Your name"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-white font-semibold mb-2">Phone *</label>
-                          <Input
-                            className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
-                            placeholder="(214) 555-0123"
-                          />
-                        </div>
-                      </div>
-
+              <Card className="glass-card p-8 rounded-2xl">
+                <CardContent className="p-0">
+                  <form className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-white font-semibold mb-2">Email</label>
+                        <label className="block text-white font-semibold mb-2">Name *</label>
                         <Input
                           className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
-                          placeholder="your@email.com"
+                          placeholder="Your name"
                         />
                       </div>
-
                       <div>
-                        <label className="block text-white font-semibold mb-2">Service Needed</label>
-                        <Select>
-                          <SelectTrigger className="glass-card border-white/20 text-white focus:border-neon rounded-xl">
-                            <SelectValue placeholder="Select a service" />
-                          </SelectTrigger>
-                          <SelectContent className="glass-card border-white/20">
-                            <SelectItem value="junk-removal">Junk Removal</SelectItem>
-                            <SelectItem value="demolition">Demolition</SelectItem>
-                            <SelectItem value="dumpster-rental">Dumpster Rental</SelectItem>
-                            <SelectItem value="skid-steer">Skid Steer Work</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div>
-                        <label className="block text-white font-semibold mb-2">Message</label>
-                        <Textarea
+                        <label className="block text-white font-semibold mb-2">Phone *</label>
+                        <Input
                           className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
-                          placeholder="Tell us about your project..."
-                          rows={4}
+                          placeholder="(214) 555-0123"
                         />
                       </div>
+                    </div>
 
-                      <Button className="w-full neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg py-4 rounded-xl neon-glow-hover transition-all duration-300">
-                        Submit Request
-                        <ArrowRight className="w-5 h-5 ml-2" />
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
+                    <div>
+                      <label className="block text-white font-semibold mb-2">Email</label>
+                      <Input
+                        className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-white font-semibold mb-2">Service Needed</label>
+                      <Select>
+                        <SelectTrigger className="glass-card border-white/20 text-white focus:border-neon rounded-xl">
+                          <SelectValue placeholder="Select a service" />
+                        </SelectTrigger>
+                        <SelectContent className="glass-card border-white/20">
+                          <SelectItem value="junk-removal">Junk Removal</SelectItem>
+                          <SelectItem value="demolition">Demolition</SelectItem>
+                          <SelectItem value="dumpster-rental">Dumpster Rental</SelectItem>
+                          <SelectItem value="skid-steer">Skid Steer Work</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div>
+                      <label className="block text-white font-semibold mb-2">Message</label>
+                      <Textarea
+                        className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
+                        placeholder="Tell us about your project..."
+                        rows={4}
+                      />
+                    </div>
+
+                    <Button className="w-full neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg py-4 rounded-xl neon-glow-hover transition-all duration-300">
+                      Submit Request
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
 
               {/* Contact Info */}
-              <AnimatedSection animation="fadeInRight" delay={400} className="space-y-6">
+              <div className="space-y-6">
                 <Card className="glass-card p-8 rounded-2xl">
                   <CardContent className="p-0">
                     <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
@@ -530,7 +472,7 @@ export default function HomePage() {
                     </div>
                   </CardContent>
                 </Card>
-              </AnimatedSection>
+              </div>
             </div>
           </div>
         </div>
@@ -539,26 +481,24 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <AnimatedSection animation="scaleIn">
-            <Card className="glass-card p-12 rounded-3xl text-center pulse-glow">
-              <CardContent className="p-0">
-                <h2 className="text-4xl font-bold text-white mb-4">
-                  Get Your Junk Removed <span className="text-neon">EZ</span>
-                </h2>
-                <p className="text-xl text-gray-300 mb-8">
-                  Fast, reliable, and affordable junk removal services across DFW
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300">
-                    Request Free Estimate
-                  </Button>
-                  <Button className="glass-card text-white hover:neon-gradient hover:text-black border border-neon font-bold text-lg px-8 py-4 rounded-full transition-all duration-300">
-                    Call Now: 214-258-3511
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </AnimatedSection>
+          <Card className="glass-card p-12 rounded-3xl text-center pulse-glow">
+            <CardContent className="p-0">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Get Your Junk Removed <span className="text-neon">EZ</span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Fast, reliable, and affordable junk removal services across DFW
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300">
+                  Request Free Estimate
+                </Button>
+                <Button className="glass-card text-white hover:neon-gradient hover:text-black border border-neon font-bold text-lg px-8 py-4 rounded-full transition-all duration-300">
+                  Call Now: 214-258-3511
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
