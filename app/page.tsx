@@ -1,9 +1,15 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 // import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Phone,
   Mail,
@@ -19,110 +25,133 @@ import {
   ArrowRight,
   Zap,
   Building2,
-} from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { MobileNav } from "@/components/mobile-nav"
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { MobileNav } from "@/components/mobile-nav";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen gradient-bg text-white">
       {/* Header */}
-    <header className="glass-card sticky top-0 z-50 border-b border-white/10">
-  <div className="container mx-auto px-6 py-2"> {/* reduced py from 4 to 2 */}
-    <div className="flex items-center justify-between h-[80px]"> {/* fixed height */}
-      {/* Logo Section */}
-      <div className="flex items-center space-x-4">
-        <div className="flex items-center space-x-2">
-          <Image
-            src="/images/jay_slogo--removebg-preview.png"
-            alt="Logo"
-            width={130}
-            height={130}
-            className="rounded-full object-cover w-[130px] h-[130px]"
-          />
+      <header className="glass-card sticky top-0 z-50 border-b border-white/10">
+        <div className="container mx-auto px-6 py-2">
+          {" "}
+          {/* reduced py from 4 to 2 */}
+          <div className="flex items-center justify-between h-[80px]">
+            {" "}
+            {/* fixed height */}
+            {/* Logo Section */}
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <Image
+                  src="/images/jay_slogo--removebg-preview.png"
+                  alt="Logo"
+                  width={130}
+                  height={130}
+                  className="rounded-full object-cover w-[130px] h-[130px]"
+                />
+              </div>
+            </div>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link
+                href="/"
+                className="text-white hover:text-neon transition-colors font-medium relative group"
+              >
+                Home
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
+              </Link>
+              <Link
+                href="#about"
+                className="text-white hover:text-neon transition-colors font-medium relative group"
+              >
+                About Us
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
+              </Link>
+              <Link
+                href="/services"
+                className="text-white hover:text-neon transition-colors font-medium relative group"
+              >
+                Services
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
+              </Link>
+              <Link
+                href="#contact"
+                className="text-white hover:text-neon transition-colors font-medium relative group"
+              >
+                Contact Us
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
+              </Link>
+            </nav>
+            {/* Desktop Contact Info */}
+            <Button
+              style={{ position: "relative", zIndex: 9999, padding: "20px" }}
+              className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              <a href="tel:2142583511" className="text-lg">
+                214-258-3511
+              </a>
+            </Button>
+            {/* Mobile Nav */}
+            <main className="relative md:hidden">
+              <MobileNav />
+            </main>
+          </div>
         </div>
-      </div>
-
-      {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center space-x-8">
-        <Link href="/" className="text-white hover:text-neon transition-colors font-medium relative group">
-          Home
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
-        </Link>
-        <Link href="#about" className="text-white hover:text-neon transition-colors font-medium relative group">
-          About Us
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
-        </Link>
-        <Link href="/services" className="text-white hover:text-neon transition-colors font-medium relative group">
-          Services
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
-        </Link>
-        <Link href="#contact" className="text-white hover:text-neon transition-colors font-medium relative group">
-          Contact Us
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
-        </Link>
-      </nav>
-
-      {/* Desktop Contact Info */}
-     <a href="tel:2142583511" className="hidden md:flex items-center space-x-3 text-neon font-bold">
-  <Phone className="w-5 h-5" />
-  <span className="text-lg">214-258-3511</span>
-</a>
-
-
-      
-
-      {/* Mobile Nav */}
-      <main className="relative md:hidden">
-        <MobileNav />
-      </main>
-    </div>
-  </div>
-</header>
-
-      
+      </header>
 
       {/* Hero Section */}
-     <section className="py-10 md:py-20 relative overflow-hidden min-h-screen max-h-screen overflow-y-auto">
-
-
+      <section className="py-10 md:py-20 relative overflow-hidden min-h-screen max-h-screen overflow-y-auto">
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight">
-
-
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight">
                   JAY'S <span className="text-neon">EZ</span>
                   <br />
                   JUNK REMOVAL
                 </h1>
                 <div className="text-xl sm:text-2xl lg:text-4xl font-bold text-neon">
-JUNK REMOVAL MADE EZ</div>
+                  JUNK REMOVAL MADE EZ
+                </div>
                 <p className="text-xl text-gray-300 max-w-lg leading-relaxed">
-                  Professional junk removal and demolition services across the DFW area. Fast, reliable, and affordable
-                  solutions for residential and commercial clients.
+                  Professional junk removal and demolition services across the
+                  DFW area. Fast, reliable, and affordable solutions for
+                  residential and commercial clients.
                 </p>
               </div>
 
-              <div className="flex items-center space-x-4 text-lg">
+              {/* <div className="flex items-center space-x-4 text-lg">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-5 h-5 text-neon" />
-                  <span className="font-semibold">Call/Text Now: 214-258-3511</span>
+                  <span className="font-semibold">
+                    Call/Text Now: 214-258-3511
+                  </span>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300">
+                <Button
+                  style={{
+                    position: "relative",
+                    zIndex: 9999,
+                    padding: "20px",
+                  }}
+                  className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300"
+                >
                   <Phone className="w-5 h-5 mr-2" />
-                  Call Us
+                  <a href="tel:2142583511" className="text-lg">
+                    Call Link
+                  </a>
                 </Button>
+
                 <Button className="glass-card text-white hover:neon-gradient hover:text-black border border-neon font-bold text-lg px-8 py-4 rounded-full transition-all duration-300">
                   <ArrowRight className="w-5 h-5 mr-2" />
-                  Book Estimate
+                  <Link href="#contact">Book Estimate</Link>
                 </Button>
               </div>
             </div>
@@ -137,21 +166,32 @@ JUNK REMOVAL MADE EZ</div>
                     <p className="text-gray-300 text-sm">Complete cleanouts</p>
                   </CardContent>
                 </Card>
-                <Card className="glass-card p-6 floating-animation" style={{ animationDelay: "1s" }}>
+                <Card
+                  className="glass-card p-6 floating-animation"
+                  style={{ animationDelay: "1s" }}
+                >
                   <CardContent className="p-0 text-center">
                     <Hammer className="w-12 h-12 text-neon mx-auto mb-4" />
                     <h3 className="font-bold text-white mb-2">Demolition</h3>
                     <p className="text-gray-300 text-sm">Professional demo</p>
                   </CardContent>
                 </Card>
-                <Card className="glass-card p-6 floating-animation" style={{ animationDelay: "2s" }}>
+                <Card
+                  className="glass-card p-6 floating-animation"
+                  style={{ animationDelay: "2s" }}
+                >
                   <CardContent className="p-0 text-center">
                     <Truck className="w-12 h-12 text-neon mx-auto mb-4" />
-                    <h3 className="font-bold text-white mb-2">Dumpster Rental</h3>
+                    <h3 className="font-bold text-white mb-2">
+                      Dumpster Rental
+                    </h3>
                     <p className="text-gray-300 text-sm">Drop-off & pickup</p>
                   </CardContent>
                 </Card>
-                <Card className="glass-card p-6 floating-animation" style={{ animationDelay: "3s" }}>
+                <Card
+                  className="glass-card p-6 floating-animation"
+                  style={{ animationDelay: "3s" }}
+                >
                   <CardContent className="p-0 text-center">
                     <Zap className="w-12 h-12 text-neon mx-auto mb-4" />
                     <h3 className="font-bold text-white mb-2">Skid Steer</h3>
@@ -173,9 +213,10 @@ JUNK REMOVAL MADE EZ</div>
                 About <span className="text-neon">Jay's EZ Junk Removal</span>
               </h2>
               <p className="text-xl text-gray-300 leading-relaxed">
-                Based in Red Oak, TX, we're your trusted local junk removal experts serving the entire DFW area. Our
-                professional team provides fast, reliable, and affordable solutions for both residential and commercial
-                clients.
+                Based in Red Oak, TX, we're your trusted local junk removal
+                experts serving the entire DFW area. Our professional team
+                provides fast, reliable, and affordable solutions for both
+                residential and commercial clients.
               </p>
               <div className="grid md:grid-cols-3 gap-8 mt-12">
                 <div className="text-center">
@@ -185,7 +226,9 @@ JUNK REMOVAL MADE EZ</div>
                 </div>
                 <div className="text-center">
                   <CheckCircle className="w-8 h-8 text-neon mx-auto mb-3" />
-                  <h3 className="font-bold text-white mb-2">Bilingual Support</h3>
+                  <h3 className="font-bold text-white mb-2">
+                    Bilingual Support
+                  </h3>
                   <p className="text-gray-300">English & Spanish</p>
                 </div>
                 <div className="text-center">
@@ -194,6 +237,17 @@ JUNK REMOVAL MADE EZ</div>
                   <p className="text-gray-300">Same-day available</p>
                 </div>
               </div>
+            </div>
+            <div className="mt-12 flex justify-center">
+              <Button
+                asChild
+                className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-6 py-3 md:px-8 md:py-4 rounded-full neon-glow-hover transition-all duration-300"
+              >
+                <a href="tel:2142583511" className="flex items-center">
+                  <Phone className="w-5 h-5 mr-2" />
+                  214-258-3511
+                </a>
+              </Button>
             </div>
           </Card>
         </div>
@@ -206,15 +260,33 @@ JUNK REMOVAL MADE EZ</div>
             <h2 className="text-4xl font-bold text-white mb-4">
               Our <span className="text-neon">Services</span>
             </h2>
-            <p className="text-xl text-gray-300">Professional solutions for all your junk removal needs</p>
+            <p className="text-xl text-gray-300">
+              Professional solutions for all your junk removal needs
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Trash2, title: "Junk Removal", desc: "Complete home & business cleanouts" },
-              { icon: Building2, title: "Dumpster Rental", desc: "Drop-off & pickup included" },
-              { icon: Zap, title: "Skid Steer Work", desc: "Heavy-duty removal & clearing" },
-              { icon: Hammer, title: "Demolition", desc: "Interior/exterior demo work" },
+              {
+                icon: Trash2,
+                title: "Junk Removal",
+                desc: "Complete home & business cleanouts",
+              },
+              {
+                icon: Building2,
+                title: "Dumpster Rental",
+                desc: "Drop-off & pickup included",
+              },
+              {
+                icon: Zap,
+                title: "Skid Steer Work",
+                desc: "Heavy-duty removal & clearing",
+              },
+              {
+                icon: Hammer,
+                title: "Demolition",
+                desc: "Interior/exterior demo work",
+              },
             ].map((service, index) => (
               <Card
                 key={index}
@@ -222,7 +294,9 @@ JUNK REMOVAL MADE EZ</div>
               >
                 <CardContent className="p-0 text-center">
                   <service.icon className="w-12 h-12 text-neon mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-bold text-white mb-2 text-lg">{service.title}</h3>
+                  <h3 className="font-bold text-white mb-2 text-lg">
+                    {service.title}
+                  </h3>
                   <p className="text-gray-300 text-sm">{service.desc}</p>
                 </CardContent>
               </Card>
@@ -232,7 +306,7 @@ JUNK REMOVAL MADE EZ</div>
           <div className="text-center mt-12">
             <Link href="/services">
               <Button className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300">
-                View All Services
+                <Link href="/services">View All Services</Link>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
@@ -252,12 +326,30 @@ JUNK REMOVAL MADE EZ</div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { src: "/images/junk-pile.jpg", alt: "Large junk removal project" },
-              { src: "/images/skid-steer-dumpster.jpg", alt: "Skid steer in action" },
-              { src: "/images/demolition-work.jpg", alt: "Professional demolition" },
-              { src: "/images/material-transport.jpg", alt: "Material transport service" },
-              { src: "/images/messy-room-before.jpg", alt: "Property cleanout before" },
-              { src: "/images/truck-loaded-junk.jpg", alt: "Loaded removal truck" },
+              {
+                src: "/images/junk-pile.jpg",
+                alt: "Large junk removal project",
+              },
+              {
+                src: "/images/skid-steer-dumpster.jpg",
+                alt: "Skid steer in action",
+              },
+              {
+                src: "/images/demolition-work.jpg",
+                alt: "Professional demolition",
+              },
+              {
+                src: "/images/material-transport.jpg",
+                alt: "Material transport service",
+              },
+              {
+                src: "/images/messy-room-before.jpg",
+                alt: "Property cleanout before",
+              },
+              {
+                src: "/images/truck-loaded-junk.jpg",
+                alt: "Loaded removal truck",
+              },
             ].map((image, index) => (
               <Card
                 key={index}
@@ -291,11 +383,15 @@ JUNK REMOVAL MADE EZ</div>
               <CardContent className="p-0">
                 <div className="flex mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-5 h-5 text-neon fill-current" />
+                    <Star
+                      key={star}
+                      className="w-5 h-5 text-neon fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-white mb-4 text-lg italic">
-                  "Fast, reliable, and honest work. Jay's team made our cleanout stress-free!"
+                  "Fast, reliable, and honest work. Jay's team made our cleanout
+                  stress-free!"
                 </p>
                 <p className="font-bold text-neon">— Sarah M., Dallas</p>
               </CardContent>
@@ -305,11 +401,15 @@ JUNK REMOVAL MADE EZ</div>
               <CardContent className="p-0">
                 <div className="flex mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-5 h-5 text-neon fill-current" />
+                    <Star
+                      key={star}
+                      className="w-5 h-5 text-neon fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-white mb-4 text-lg italic">
-                  "Professional service at great prices. Highly recommend for any junk removal needs."
+                  "Professional service at great prices. Highly recommend for
+                  any junk removal needs."
                 </p>
                 <p className="font-bold text-neon">— Mike R., Red Oak</p>
               </CardContent>
@@ -326,7 +426,9 @@ JUNK REMOVAL MADE EZ</div>
               <h2 className="text-4xl font-bold text-white mb-4">
                 Areas We <span className="text-neon">Serve</span>
               </h2>
-              <p className="text-xl text-gray-300">Proudly serving the entire DFW metroplex</p>
+              <p className="text-xl text-gray-300">
+                Proudly serving the entire DFW metroplex
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
@@ -364,7 +466,9 @@ JUNK REMOVAL MADE EZ</div>
               <h2 className="text-4xl font-bold text-white mb-4">
                 Get Your <span className="text-neon">Free Estimate</span>
               </h2>
-              <p className="text-xl text-gray-300">Ready to get started? Contact us today!</p>
+              <p className="text-xl text-gray-300">
+                Ready to get started? Contact us today!
+              </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
@@ -374,14 +478,18 @@ JUNK REMOVAL MADE EZ</div>
                   <form className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-white font-semibold mb-2">Name *</label>
+                        <label className="block text-white font-semibold mb-2">
+                          Name *
+                        </label>
                         <Input
                           className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
                           placeholder="Your name"
                         />
                       </div>
                       <div>
-                        <label className="block text-white font-semibold mb-2">Phone *</label>
+                        <label className="block text-white font-semibold mb-2">
+                          Phone *
+                        </label>
                         <Input
                           className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
                           placeholder="(214) 555-0123"
@@ -390,7 +498,9 @@ JUNK REMOVAL MADE EZ</div>
                     </div>
 
                     <div>
-                      <label className="block text-white font-semibold mb-2">Email</label>
+                      <label className="block text-white font-semibold mb-2">
+                        Email
+                      </label>
                       <Input
                         className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
                         placeholder="your@email.com"
@@ -398,22 +508,32 @@ JUNK REMOVAL MADE EZ</div>
                     </div>
 
                     <div>
-                      <label className="block text-white font-semibold mb-2">Service Needed</label>
+                      <label className="block text-white font-semibold mb-2">
+                        Service Needed
+                      </label>
                       <Select>
                         <SelectTrigger className="glass-card border-white/20 text-white focus:border-neon rounded-xl">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent className="glass-card border-white/20">
-                          <SelectItem value="junk-removal">Junk Removal</SelectItem>
+                          <SelectItem value="junk-removal">
+                            Junk Removal
+                          </SelectItem>
                           <SelectItem value="demolition">Demolition</SelectItem>
-                          <SelectItem value="dumpster-rental">Dumpster Rental</SelectItem>
-                          <SelectItem value="skid-steer">Skid Steer Work</SelectItem>
+                          <SelectItem value="dumpster-rental">
+                            Dumpster Rental
+                          </SelectItem>
+                          <SelectItem value="skid-steer">
+                            Skid Steer Work
+                          </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
 
                     <div>
-                      <label className="block text-white font-semibold mb-2">Message</label>
+                      <label className="block text-white font-semibold mb-2">
+                        Message
+                      </label>
                       <Textarea
                         className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
                         placeholder="Tell us about your project..."
@@ -433,7 +553,9 @@ JUNK REMOVAL MADE EZ</div>
               <div className="space-y-6">
                 <Card className="glass-card p-8 rounded-2xl">
                   <CardContent className="p-0">
-                    <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                    <h3 className="text-2xl font-bold text-white mb-6">
+                      Contact Information
+                    </h3>
                     <div className="space-y-4">
                       <div className="flex items-center space-x-4">
                         <Phone className="w-6 h-6 text-neon" />
@@ -446,7 +568,9 @@ JUNK REMOVAL MADE EZ</div>
                         <Mail className="w-6 h-6 text-neon" />
                         <div>
                           <p className="text-white font-semibold">Email</p>
-                          <p className="text-gray-300">Jayson@jaysezjunkremoval.com</p>
+                          <p className="text-gray-300">
+                            Jayson@jaysezjunkremoval.com
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-4">
@@ -462,7 +586,9 @@ JUNK REMOVAL MADE EZ</div>
 
                 <Card className="glass-card p-8 rounded-2xl">
                   <CardContent className="p-0">
-                    <h3 className="text-2xl font-bold text-white mb-6">Follow Us</h3>
+                    <h3 className="text-2xl font-bold text-white mb-6">
+                      Follow Us
+                    </h3>
                     <div className="flex space-x-4">
                       <Button
                         size="lg"
@@ -504,10 +630,20 @@ JUNK REMOVAL MADE EZ</div>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300">
-                  Request Free Estimate
+                  <Link href="#contact">Request Free Estimate</Link> 
                 </Button>
-                <Button className="glass-card text-white hover:neon-gradient hover:text-black border border-neon font-bold text-lg px-8 py-4 rounded-full transition-all duration-300">
-                  Call Now: 214-258-3511
+                <Button
+                  style={{
+                    position: "relative",
+                    zIndex: 9999,
+                    padding: "20px",
+                  }}
+                  className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  <a href="tel:2142583511" className="text-lg">
+                    Call Now
+                  </a>
                 </Button>
               </div>
             </CardContent>
@@ -516,63 +652,64 @@ JUNK REMOVAL MADE EZ</div>
       </section>
 
       {/* Footer */}
-    <footer className="glass-card border-t border-white/10 py-12">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-10">
-    <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
-      {/* Logo + Description */}
-      <div className="text-center lg:text-left " >
-        <Image
-          src="/images/jay_slogo--removebg-preview.png"
-          alt="Logo"
-          width={130}
-          height={130}
-          className="rounded-full object-cover mx-auto lg:mx-0 "
-        />
-        <h3 className="text- font-bold text-white mb-2">
-          JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL
-        </h3>
-        <p className="text-gray-300">Professional junk removal services across DFW</p>
-      </div>
+      <footer className="glass-card border-t border-white/10 py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+            {/* Logo + Description */}
+            <div className="text-center lg:text-left ">
+              <Image
+                src="/images/jay_slogo--removebg-preview.png"
+                alt="Logo"
+                width={130}
+                height={130}
+                className="rounded-full object-cover mx-auto lg:mx-0 "
+              />
+              <h3 className="text- font-bold text-white mb-2">
+                JAY'S <span className="text-neon">EZ</span> JUNK REMOVAL
+              </h3>
+              <p className="text-gray-300">
+                Professional junk removal services across DFW
+              </p>
+            </div>
 
-      {/* Services */}
-      <div className="text-center lg:text-left">
-        <h4 className="font-bold text-white mb-4">Services</h4>
-        <div className="space-y-2 text-gray-300">
-          <p>Junk Removal</p>
-          <p>Demolition</p>
-          <p>Dumpster Rental</p>
-          <p>Skid Steer Work</p>
+            {/* Services */}
+            <div className="text-center lg:text-left">
+              <h4 className="font-bold text-white mb-4">Services</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>Junk Removal</p>
+                <p>Demolition</p>
+                <p>Dumpster Rental</p>
+                <p>Skid Steer Work</p>
+              </div>
+            </div>
+
+            {/* Contact */}
+            <div className="text-center lg:text-left">
+              <h4 className="font-bold text-white mb-4">Contact</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>214-258-3511</p>
+                <p>Jayson@jaysezjunkremoval.com</p>
+                <p>Red Oak, TX</p>
+              </div>
+            </div>
+
+            {/* Service Areas */}
+            <div className="text-center lg:text-left">
+              <h4 className="font-bold text-white mb-4">Service Areas</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>Red Oak, TX</p>
+                <p>Dallas, TX</p>
+                <p>All of DFW</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Bottom */}
+          <div className="border-t border-white/10 mt-10 pt-6 text-center text-gray-300">
+            <p>&copy; 2025 Jay's EZ Junk Removal. All rights reserved.</p>
+          </div>
         </div>
-      </div>
-
-      {/* Contact */}
-      <div className="text-center lg:text-left">
-        <h4 className="font-bold text-white mb-4">Contact</h4>
-        <div className="space-y-2 text-gray-300">
-          <p>214-258-3511</p>
-          <p>Jayson@jaysezjunkremoval.com</p>
-          <p>Red Oak, TX</p>
-        </div>
-      </div>
-
-      {/* Service Areas */}
-      <div className="text-center lg:text-left">
-        <h4 className="font-bold text-white mb-4">Service Areas</h4>
-        <div className="space-y-2 text-gray-300">
-          <p>Red Oak, TX</p>
-          <p>Dallas, TX</p>
-          <p>All of DFW</p>
-        </div>
-      </div>
+      </footer>
     </div>
-
-    {/* Footer Bottom */}
-    <div className="border-t border-white/10 mt-10 pt-6 text-center text-gray-300">
-      <p>&copy; 2025 Jay's EZ Junk Removal. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
-    </div>
-  )
+  );
 }
