@@ -436,7 +436,7 @@ export default function ServicesPage() {
                   <Button className="glass-card text-white hover:neon-gradient hover:text-black border border-neon font-bold text-lg px-8 py-4 rounded-full transition-all duration-300">
                     <Mail className="w-5 h-5 mr-2" />
                     
-                     <Link href="#contact">Book Estimate</Link>
+                     <Link href="/#contact">Book Estimate</Link>
                     
                   </Button>
                 </div>
