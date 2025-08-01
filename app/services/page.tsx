@@ -112,7 +112,7 @@
                   Home
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
                 </Link>
-                <Link href="#about" className="text-white hover:text-neon transition-colors font-medium relative group">
+                <Link href="/#about" className="text-white hover:text-neon transition-colors font-medium relative group">
                   About Us
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
                 </Link>
@@ -120,7 +120,7 @@
                   Services
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
                 </Link>
-                <Link href="#contact" className="text-white hover:text-neon transition-colors font-medium relative group">
+                <Link href="/#contact" className="text-white hover:text-neon transition-colors font-medium relative group">
                   Contact Us
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
                 </Link>

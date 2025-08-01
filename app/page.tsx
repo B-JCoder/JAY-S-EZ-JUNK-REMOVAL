@@ -65,10 +65,13 @@ export default function HomePage() {
       </nav>
 
       {/* Desktop Contact Info */}
-      <div className="hidden md:flex items-center space-x-3 text-neon font-bold">
-        <Phone className="w-5 h-5" />
-        <span className="text-lg">214-258-3511</span>
-      </div>
+     <a href="tel:2142583511" className="hidden md:flex items-center space-x-3 text-neon font-bold">
+  <Phone className="w-5 h-5" />
+  <span className="text-lg">214-258-3511</span>
+</a>
+
+
+      
 
       {/* Mobile Nav */}
       <main className="relative md:hidden">
