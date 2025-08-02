@@ -411,37 +411,88 @@ export default function ServicesPage() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <AnimatedSection animation="scaleIn">
-            <Card className="glass-card p-12 rounded-3xl text-center pulse-glow">
-              <CardContent className="p-0">
-                <h2 className="text-4xl font-bold text-white mb-4">
-                  Need Junk Gone <span className="text-neon">Today?</span>
-                </h2>
-                <p className="text-xl text-gray-300 mb-8">
-                  Fast, reliable service across DFW. Get your free estimate now!
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    style={{
-                      position: "relative",
-                      zIndex: 9999,
-                      padding: "20px",
-                    }}
-                    className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300"
-                  >
-                    <Phone className="w-5 h-5 mr-2" />
-                    <a href="tel:2142583511" className="text-lg">
-                      Call Now
-                    </a>
-                  </Button>
-                  <Button className="glass-card text-white hover:neon-gradient hover:text-black border border-neon font-bold text-lg px-8 py-4 rounded-full transition-all duration-300">
-                    <Mail className="w-5 h-5 mr-2" />
-                    
-                     <Link href="/#contact">Book Estimate</Link>
-                    
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+         <Card className="glass-card p-6 sm:p-8 rounded-2xl shadow-xl border border-white/10">
+      <CardContent className="p-0">
+        <form
+          action="https://formspree.io/f/your-form-id" // Replace with your Formspree endpoint
+          method="POST"
+          onSubmit={() => setSubmitted(true)}
+          className="space-y-6"
+        >
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-white font-semibold mb-2">
+                Name *
+              </label>
+              <Input
+                required
+                type="text"
+                name="name"
+                className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label className="block text-white font-semibold mb-2">
+                Phone *
+              </label>
+              <Input
+                required
+                type="tel"
+                name="phone"
+                className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
+                placeholder="(214) 555-0123"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-white font-semibold mb-2">Email</label>
+            <Input
+              type="email"
+              name="email"
+              className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
+              placeholder="your@email.com"
+            />
+          </div>
+
+          <div>
+            <label className="block text-white font-semibold mb-2">
+              Service Needed
+            </label>
+            <Select name="service">
+              <SelectTrigger className="glass-card border-white/20 text-white focus:border-neon rounded-xl">
+                <SelectValue placeholder="Select a service" />
+              </SelectTrigger>
+              <SelectContent className="glass-card border-white/20">
+                <SelectItem value="junk-removal">Junk Removal</SelectItem>
+                <SelectItem value="demolition">Demolition</SelectItem>
+                <SelectItem value="dumpster-rental">Dumpster Rental</SelectItem>
+                <SelectItem value="skid-steer">Skid Steer Work</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <label className="block text-white font-semibold mb-2">Message</label>
+            <Textarea
+              name="message"
+              className="glass-card border-white/20 text-white placeholder:text-gray-400 focus:border-neon rounded-xl"
+              placeholder="Tell us about your project..."
+              rows={4}
+            />
+          </div>
+
+          <Button
+            type="submit"
+            className="w-full neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg py-4 rounded-xl neon-glow-hover transition-all duration-300"
+          >
+            {submitted ? "Sending..." : "Submit Request"}
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
           </AnimatedSection>
         </div>
       </section>
