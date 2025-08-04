@@ -315,7 +315,7 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold text-white mb-4">
               Our <span className="text-neon">Work</span>
             </h2>
-            <p className="text-xl text-gray-300">Before & After Results</p>
+            {/* <p className="text-xl text-gray-300">Before & After Results</p> */}
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
