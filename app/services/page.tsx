@@ -413,12 +413,14 @@ export default function ServicesPage() {
           <AnimatedSection animation="scaleIn">
          <Card className="glass-card p-6 sm:p-8 rounded-2xl shadow-xl border border-white/10">
       <CardContent className="p-0">
-        <form
-          action="https://formspree.io/f/your-form-id" // Replace with your Formspree endpoint
-          method="POST"
-          onSubmit={() => setSubmitted(true)}
-          className="space-y-6"
-        >
+         <form
+  action="https://formsubmit.co/Jayson@jaysezjunkremoval.com"
+  method="POST"
+  className="space-y-6"
+>
+  {/* Hidden input for redirect after success */}
+  <input type="hidden" name="_next" value="https://jaysezjunkremoval.com/thank-you" />
+  <input type="hidden" name="_captcha" value="false" />
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-white font-semibold mb-2">
