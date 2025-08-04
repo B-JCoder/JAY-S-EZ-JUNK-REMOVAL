@@ -606,7 +606,7 @@ export default function HomePage() {
                         size="lg"
                         className="glass-card text-white hover:neon-gradient hover:text-black rounded-xl"
                       >
-                        <Facebook className="w-5 h-5" />
+                       <Link href="https://www.facebook.com/profile.php?id=61576618977663#"> <Facebook className="w-5 h-5" /></Link>
                       </Button>
                       <Button
                         size="lg"
