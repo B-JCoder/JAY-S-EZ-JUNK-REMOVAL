@@ -158,12 +158,17 @@ export const ContactForm = () => {
                       Follow Us
                     </h3>
                     <div className="flex space-x-4">
-                      <Button
-                        size="lg"
-                        className="glass-card text-white hover:neon-gradient hover:text-black rounded-xl"
-                      >
-                       <Link href="https://www.facebook.com/profile.php?id=61576618977663#"> <Facebook className="w-5 h-5" /></Link>
-                      </Button>
+                       <Link href="https://www.facebook.com/profile.php?id=61576618977663" target="_blank">
+        <Button
+          size="lg"
+          className="glass-card text-white hover:neon-gradient hover:text-black rounded-xl"
+        >
+          <Facebook className="w-5 h-5" />
+        </Button>
+      </Link>
+                     
+                     
+                     
                       <Button
                         size="lg"
                         className="glass-card text-white hover:neon-gradient hover:text-black rounded-xl"
