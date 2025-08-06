@@ -39,7 +39,7 @@ export default function HomePage() {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Image
-                  src="/images/jay_slogo--removebg-preview.png"
+                  src="/images/jay's.png"
                   alt="Logo"
                   width={130}
                   height={130}
