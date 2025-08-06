@@ -158,14 +158,16 @@ export const ContactForm = () => {
                       Follow Us
                     </h3>
                     <div className="flex space-x-4">
+                       
+                       
                        <Link href="https://www.facebook.com/profile.php?id=61576618977663" target="_blank">
         <Button
           size="lg"
           className="glass-card text-white hover:neon-gradient hover:text-black rounded-xl"
         >
-          <Facebook className="w-5 h-5" />
+         <Link href="https://www.facebook.com/profile.php?id=61576618977663" target="_blank"><Facebook className="w-5 h-5" /></Link> 
         </Button>
-      </Link>
+      
                      
                      
                      
