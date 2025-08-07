@@ -161,22 +161,32 @@ export const ContactForm = () => {
                        
                        
                        
-        <Button
-          size="lg"
-          className="glass-card text-white hover:neon-gradient hover:text-black rounded-xl"
-        >
-         <Link href="https://www.facebook.com/profile.php?id=61576618977663" target="_blank"><Facebook className="w-5 h-5" /></Link> 
-        </Button>
-      
-                     
-                     
-                     
-                      <Button
-                        size="lg"
-                        className="glass-card text-white hover:neon-gradient hover:text-black rounded-xl"
-                      >
-                        <Instagram className="w-5 h-5" />
-                      </Button>
+      <a
+  href="https://www.facebook.com/profile.php?id=61576618977663"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    size="lg"
+    className="glass-card text-white hover:neon-gradient hover:text-black rounded-xl"
+  >
+    <Facebook className="w-5 h-5" />
+  </Button>
+</a>
+
+<a
+  href="https://www.instagram.com/jaysezjunk/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    size="lg"
+    className="glass-card text-white hover:neon-gradient hover:text-black rounded-xl"
+  >
+    <Instagram className="w-5 h-5" />
+  </Button>
+</a>
+
                       <Button
                         size="lg"
                         className="glass-card text-white hover:neon-gradient hover:text-black rounded-xl"
