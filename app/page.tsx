@@ -41,9 +41,9 @@ export default function HomePage() {
                 <Image
                   src="/images/jay's.png"
                   alt="Logo"
-                  width={100}
-                  height={100}
-                  className="rounded-full object-cover w-[130px] h-[130px]"
+                  width={110}
+                  height={110}
+                  className=" w-[130px] h-[100px]"
                 />
               </div>
             </div>
