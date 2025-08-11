@@ -1,42 +1,25 @@
-"use client"
+import { useEffect, useRef, useState } from "react";
 
-import { useEffect, useRef, useState } from "react"
-
-interface UseScrollAnimationOptions {
-  threshold?: number
-  rootMargin?: string
-  triggerOnce?: boolean
+interface ScrollAnimationOptions {
+  threshold?: number;
 }
 
-export function useScrollAnimation(options: UseScrollAnimationOptions = {}) {
-  const { threshold = 0.1, rootMargin = "0px", triggerOnce = true } = options
-  const [isVisible, setIsVisible] = useState(false)
-  const elementRef = useRef<HTMLElement>(null)
+export function useScrollAnimation<T extends HTMLElement>({
+  threshold = 0.1,
+}: ScrollAnimationOptions) {
+  const elementRef = useRef<T | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const element = elementRef.current
-    if (!element) return
-
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          if (triggerOnce) {
-            observer.unobserve(element)
-          }
-        } else if (!triggerOnce) {
-          setIsVisible(false)
-        }
-      },
-      { threshold, rootMargin },
-    )
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold }
+    );
 
-    observer.observe(element)
+    if (elementRef.current) observer.observe(elementRef.current);
 
-    return () => {
-      observer.unobserve(element)
-    }
-  }, [threshold, rootMargin, triggerOnce])
+    return () => observer.disconnect();
+  }, [threshold]);
 
-  return { elementRef, isVisible }
+  return { elementRef, isVisible };
 }

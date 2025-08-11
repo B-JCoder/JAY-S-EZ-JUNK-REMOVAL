@@ -1,21 +1,28 @@
-"use client"
+"use client";
 
-import type { ReactNode } from "react"
-import { useParallax } from "@/hooks/use-parallax"
+import type { ReactNode } from "react";
+import { useParallax } from "@/hooks/use-parallax";
 
 interface ParallaxBackgroundProps {
-  children: ReactNode
-  className?: string
-  speed?: number
-  overlay?: boolean
+  children: ReactNode;
+  className?: string;
+  speed?: number;
+  overlay?: boolean;
 }
 
-export function ParallaxBackground({ children, className = "", speed = 0.3, overlay = true }: ParallaxBackgroundProps) {
-  const { elementRef, offset } = useParallax({ speed, direction: "up" })
+export function ParallaxBackground({
+  children,
+  className = "",
+  speed = 0.3,
+  overlay = true,
+}: ParallaxBackgroundProps) {
+  const { elementRef, offset } = useParallax<HTMLDivElement>({
+    speed,
+    direction: "up",
+  });
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
-      {/* Parallax Background Layer */}
       <div
         ref={elementRef}
         className="absolute inset-0 will-change-transform"
@@ -24,10 +31,7 @@ export function ParallaxBackground({ children, className = "", speed = 0.3, over
           transition: "none",
         }}
       >
-        {/* Animated gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-blue-900 opacity-80" />
-
-        {/* Floating particles effect */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <div
@@ -44,11 +48,11 @@ export function ParallaxBackground({ children, className = "", speed = 0.3, over
         </div>
       </div>
 
-      {/* Overlay */}
-      {overlay && <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-10" />}
+      {overlay && (
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-10" />
+      )}
 
-      {/* Content */}
       <div className="relative z-20">{children}</div>
     </div>
-  )
+  );
 }

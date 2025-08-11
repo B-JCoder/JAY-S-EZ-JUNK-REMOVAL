@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import type { ReactNode } from "react"
-import { useParallax } from "@/hooks/use-parallax"
+import type { ReactNode } from "react";
+import { useParallax } from "@/hooks/use-parallax";
 
 interface ParallaxContainerProps {
-  children: ReactNode
-  className?: string
-  speed?: number
-  direction?: "up" | "down"
-  disabled?: boolean
+  children: ReactNode;
+  className?: string;
+  speed?: number;
+  direction?: "up" | "down";
+  disabled?: boolean;
 }
 
 export function ParallaxContainer({
@@ -18,7 +18,11 @@ export function ParallaxContainer({
   direction = "up",
   disabled = false,
 }: ParallaxContainerProps) {
-  const { elementRef, offset } = useParallax({ speed, direction, disabled })
+  const { elementRef, offset } = useParallax<HTMLDivElement>({
+    speed,
+    direction,
+    disabled,
+  });
 
   return (
     <div
@@ -26,10 +30,10 @@ export function ParallaxContainer({
       className={className}
       style={{
         transform: `translateY(${offset}px)`,
-        transition: "none", // Disable transitions for smooth parallax
+        transition: "none",
       }}
     >
       {children}
     </div>
-  )
+  );
 }
