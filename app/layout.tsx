@@ -6,19 +6,19 @@ import './globals.css'
 export const metadata: Metadata = {
   title: "JAY-S EZ JUNK REMOVAL | Junk Removal Services USA & GTA",
   description: "Professional junk removal services in the Greater Toronto Area and across the USA. Affordable, eco-friendly, and same-day pickup available. Call now!",
-  // keywords: [
-  //   "junk removal USA",
-  //   "junk cleaning service",
-  //   "trash removal",
-  //   "waste disposal",
-  //   "junk removal GTA",
-  //   "affordable junk hauling",
-  //   "eco-friendly junk removal",
-  //   "same-day junk pickup",
-  //   "clean out services USA",
-  //   "residential junk removal",
-  //   "commercial junk hauling"
-  // ],
+  keywords: [
+    "junk removal USA",
+    "junk cleaning service",
+    "trash removal",
+    "waste disposal",
+    "junk removal GTA",
+    "affordable junk hauling",
+    "eco-friendly junk removal",
+    "same-day junk pickup",
+    "clean out services USA",
+    "residential junk removal",
+    "commercial junk hauling"
+  ],
   openGraph: {
     title: "JAY-S EZ JUNK REMOVAL",
     description: "Expert junk removal services across USA and GTA. Call 214-258-3511 for fast, affordable cleanup.",
@@ -35,11 +35,11 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  icons: {
-    icon: "/images/jay's.png",
-    shortcut: "/images/jay's.png",
-    apple: "/images/jay's.png",
-  },
+  // icons: {
+  //   icon: "",
+  //   shortcut: "/images/jay's.png",
+  //   apple: "/images/jay's.png",
+  // },
 };
 
 export default function RootLayout({
