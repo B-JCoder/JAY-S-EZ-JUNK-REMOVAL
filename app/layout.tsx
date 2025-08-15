@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "JAY-S EZ JUNK REMOVAL",
     images: [
       {
-        url: "/images/jay's.png",
+        url: "/images/logowithblack.png",
         width: 600,
         height: 400,
         alt: "JAY-S EZ Junk Removal Logo"
