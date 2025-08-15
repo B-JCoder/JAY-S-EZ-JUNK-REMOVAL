@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "",
+    icon: "/images/logowithblack.png",
     shortcut: "/images/logowithblack.png",
-    apple: "/images/jay's.png",
+    apple: "/images/logowithblack.png",
   },
 };
 
