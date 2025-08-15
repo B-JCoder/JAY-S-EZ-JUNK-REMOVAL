@@ -4,7 +4,7 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: "JAY-S EZ JUNK REMOVAL | Junk Removal Services USA & GTA",
+  title: "JAYS EZ JUNK REMOVAL | Junk Removal Services USA & GTA",
   description: "Professional junk removal services in the Greater Toronto Area and across the USA. Affordable, eco-friendly, and same-day pickup available. Call now!",
   keywords: [
     "junk removal USA",
