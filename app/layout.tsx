@@ -35,11 +35,11 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  // icons: {
-  //   icon: "",
-  //   shortcut: "/images/jay's.png",
-  //   apple: "/images/jay's.png",
-  // },
+  icons: {
+    icon: "",
+    shortcut: "/images/logowithblack.png",
+    apple: "/images/jay's.png",
+  },
 };
 
 export default function RootLayout({
