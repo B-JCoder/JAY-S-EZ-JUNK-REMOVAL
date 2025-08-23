@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -24,7 +23,6 @@ import { MobileNav } from "@/components/mobile-nav";
 import { ContactForm } from "@/components/ContactForm";
 
 export default function HomePage() {
-  
   return (
     <div className="min-h-screen gradient-bg text-white">
       {/* Header */}
@@ -78,21 +76,22 @@ export default function HomePage() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon transition-all group-hover:w-full"></span>
               </Link>
             </nav>
-         {/* Desktop Contact Info */}
-<Button
-  style={{ position: "relative", padding: "20px" }}
-  className="hidden md:flex neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300"
->
-  <Phone className="w-5 h-5 mr-2" />
-  <a href="tel:2142583511" className="text-lg">
-    214-258-3511
-  </a>
-</Button>
-
-{/* Mobile Nav */}
-<main className="relative md:hidden z-50"> {/* yahan z-index zyada rakho */}
-  <MobileNav />
-</main>
+            {/* Desktop Contact Info */}
+            <Button
+              style={{ position: "relative", padding: "20px" }}
+              className="hidden md:flex neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              <a href="tel:2142583511" className="text-lg">
+                214-258-3511
+              </a>
+            </Button>
+            {/* Mobile Nav */}
+            <main className="relative md:hidden z-50">
+              {" "}
+              {/* yahan z-index zyada rakho */}
+              <MobileNav />
+            </main>
           </div>
         </div>
       </header>
@@ -385,10 +384,12 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-white mb-4 text-lg italic">
-                  "Fast, reliable, and honest work. Jay's team made our cleanout
-                  stress-free!"
+                  Jayson was wonderful to work with! He was responsive, timely,
+                  and very professional. He arrived when he said he would and
+                  had the tools to get the job done right. I will definitely use
+                  him again for future projects!
                 </p>
-                <p className="font-bold text-neon">— Sarah M., Dallas</p>
+                <p className="font-bold text-neon">Jennifer Kirkley</p>
               </CardContent>
             </Card>
 
@@ -403,10 +404,9 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-white mb-4 text-lg italic">
-                  "Professional service at great prices. Highly recommend for
-                  any junk removal needs."
+                  Wonderful customer service and professional! We called him and he was able to be at our location in 20 minutes! Super quick and easy!
                 </p>
-                <p className="font-bold text-neon">— Mike R., Red Oak</p>
+                <p className="font-bold text-neon">Chloe Insley</p>
               </CardContent>
             </Card>
           </div>
@@ -454,8 +454,8 @@ export default function HomePage() {
       </section>
 
       {/* Contact Form */}
-    
-    <ContactForm />
+
+      <ContactForm />
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
@@ -469,7 +469,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300">
-                  <Link href="#contact">Request Free Estimate</Link> 
+                  <Link href="#contact">Request Free Estimate</Link>
                 </Button>
                 <Button
                   style={{
