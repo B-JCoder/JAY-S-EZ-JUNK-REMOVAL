@@ -27,7 +27,58 @@ import { ParallaxBackground } from "@/components/parallax-background";
 import Image from "next/image";
 
 import { ContactForm } from "@/components/ContactForm";
+import type { Metadata } from "next"
 
+export const metadata: Metadata = {
+  title: "Junk Removal Services | Residential & Commercial | JAYS EZ JUNK REMOVAL",
+  description:
+    "Complete junk removal services: residential cleanouts, commercial debris, furniture removal, appliance pickup, electronics recycling, hoarding cleanup. USA & GTA coverage. Call 214-258-3511!",
+  keywords: [
+    "junk removal services",
+    "residential junk removal",
+    "commercial junk removal",
+    "furniture removal service",
+    "appliance pickup",
+    "construction debris removal",
+    "electronics recycling service",
+    "hoarding cleanup service",
+    "estate cleanout service",
+    "garage cleanout",
+    "basement cleanout",
+    "attic cleanout",
+    "office cleanout",
+    "retail space clearing",
+    "hot tub removal",
+    "piano removal",
+    "exercise equipment removal",
+    "moving junk removal",
+    "foreclosure cleanout",
+    "specialty item removal",
+  ],
+  openGraph: {
+    title: "Complete Junk Removal Services | JAYS EZ JUNK REMOVAL",
+    description:
+      "🏠 Residential & 🏢 Commercial junk removal services. Furniture, appliances, construction debris, electronics recycling, hoarding cleanup. USA & GTA. Call 214-258-3511",
+    url: "https://jaysezjunkremoval.com/services",
+    images: [
+      {
+        url: "/images/logowithblack.png",
+        width: 1200,
+        height: 630,
+        alt: "Jay's EZ Junk Removal Services - Complete junk removal solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Complete Junk Removal Services | JAYS EZ JUNK REMOVAL",
+    description:
+      "🏠 Residential & 🏢 Commercial junk removal. Furniture, appliances, debris removal. USA & GTA coverage. Call 214-258-3511",
+  },
+  alternates: {
+    canonical: "https://jaysezjunkremoval.com/services",
+  },
+}
 
 
 export default function ServicesPage() {

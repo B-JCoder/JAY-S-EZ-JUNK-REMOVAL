@@ -21,7 +21,55 @@ import Link from "next/link";
 import { MobileNav } from "@/components/mobile-nav";
 // import { useState } from "react"
 import { ContactForm } from "@/components/ContactForm";
+import type { Metadata } from "next"
 
+export const metadata: Metadata = {
+  title: "JAYS EZ JUNK REMOVAL | #1 Junk Removal Services USA & GTA | Same-Day Pickup",
+  description:
+    "⭐ #1 Rated Junk Removal! 30% cheaper than competitors with same-day pickup in USA & GTA. Licensed, insured, eco-friendly disposal. Free quotes! Call 214-258-3511 now!",
+  keywords: [
+    "junk removal USA",
+    "junk removal GTA",
+    "same day junk pickup",
+    "affordable junk removal",
+    "residential junk removal",
+    "commercial junk removal",
+    "eco-friendly junk disposal",
+    "licensed junk removal",
+    "furniture removal",
+    "appliance pickup",
+    "construction debris removal",
+    "electronics recycling",
+    "hoarding cleanup",
+    "estate cleanouts",
+    "Dallas junk removal",
+    "Toronto junk removal",
+    "cheap junk hauling",
+    "professional junk removal",
+  ],
+  openGraph: {
+    title: "🏆 #1 JAYS EZ JUNK REMOVAL | Same-Day Pickup USA & GTA",
+    description:
+      "⭐ 30% cheaper! Same-day junk removal across USA & Greater Toronto Area. Licensed, insured, eco-friendly. Free quotes! Call 214-258-3511",
+    url: "https://jaysezjunkremoval.com",
+    images: [
+      {
+        url: "/images/logowithblack.png",
+        width: 1200,
+        height: 630,
+        alt: "Jay's EZ Junk Removal - Professional junk removal truck and team",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "🏆 #1 JAYS EZ JUNK REMOVAL | Same-Day Pickup",
+    description: "⭐ 30% cheaper! Same-day junk removal USA & GTA. Licensed, insured, eco-friendly. Call 214-258-3511",
+  },
+  alternates: {
+    canonical: "https://jaysezjunkremoval.com",
+  },
+}
 export default function HomePage() {
   return (
     <div className="min-h-screen gradient-bg text-white">
