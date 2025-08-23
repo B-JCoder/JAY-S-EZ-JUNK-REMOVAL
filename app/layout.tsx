@@ -4,10 +4,10 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jaysezjunkremoval.com"), // ✅ Live domain
+  metadataBase: new URL("https://jaysezjunkremoval.com"), 
   title: {
-    default: "JAY-S EZ JUNK REMOVAL | Junk Removal Services USA & GTA",
-    template: "%s | JAY-S EZ JUNK REMOVAL"
+    default: "JAYS EZ JUNK REMOVAL | Junk Removal Services USA & GTA",
+    template: "%s | JAYS EZ JUNK REMOVAL"
   },
   description:
     "Affordable and eco-friendly junk removal services in the Greater Toronto Area and across the USA. Same-day pickup available. Call 214-258-3511 today!",
@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     "junk removal company"
   ],
   openGraph: {
-    title: "JAY-S EZ JUNK REMOVAL",
+    title: "JAYS EZ JUNK REMOVAL",
     description:
       "Expert junk removal services across USA and GTA. Fast, affordable, eco-friendly junk hauling with same-day pickup. Call 214-258-3511.",
     url: "https://jaysezjunkremoval.com/",
-    siteName: "JAY-S EZ JUNK REMOVAL",
+    siteName: "JAYS EZ JUNK REMOVAL",
     images: [
       {
         url: "/images/logowithblack.png", // ✅ Absolute path via metadataBase
