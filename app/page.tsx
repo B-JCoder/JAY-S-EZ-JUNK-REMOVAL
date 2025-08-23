@@ -20,7 +20,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { MobileNav } from "@/components/mobile-nav";
-import { useState } from "react"
+// import { useState } from "react"
 import { ContactForm } from "@/components/ContactForm";
 
 export default function HomePage() {
