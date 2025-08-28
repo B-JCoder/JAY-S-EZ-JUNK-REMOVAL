@@ -181,7 +181,7 @@ export const ContactForm = () => {
                   </h3>
                   <div className="flex space-x-4">
                     <a
-                      href="https://www.facebook.com/profile.php?id=61576618977663"
+                      href="https://www.facebook.com/p/JAYS-EZ-Junk-Removal-61576618977663/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
