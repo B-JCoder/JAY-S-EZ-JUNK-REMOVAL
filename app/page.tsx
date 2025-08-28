@@ -26,9 +26,7 @@ import Head from "next/head";
 export const metadata: Metadata = {
   title:
     "Jay's EZ Junk Removal | Junk Removal in Dallas, Red Oak & DFW | Same-Day Service",
-    icons: {
-    icon: "/images/favicon.png",
-  },
+    
   description:
     "Affordable junk removal in Dallas, Red Oak & all of DFW. Same-day service, licensed & insured, eco-friendly disposal. Call 214-258-3511 for a free quote!",
   keywords: [
@@ -209,10 +207,16 @@ export default function HomePage() {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4">
-                <Button className="w-full sm:w-auto neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full neon-glow-hover transition-all duration-300">
-                  <Phone className="w-5 h-5 mr-2" />
-                  <a href="tel:2142583511">Call for Junk Removal Dallas, TX</a>
-                </Button>
+              
+                 <Button
+              style={{ position: "relative", padding: "20px" }}
+              className="hidden md:flex neon-gradient text-black hover:bg-black hover:text-neon border-2 border-transparent hover:border-neon font-bold text-lg px-8 py-4 rounded-full neon-glow-hover transition-all duration-300"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              <a href="tel:2142583511" className="text-lg">
+                Call for Junk Removal Dallas, TX
+              </a>
+            </Button>
 
                 <Button className="w-full sm:w-auto glass-card text-white hover:neon-gradient hover:text-black border border-neon font-bold text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300">
                   <ArrowRight className="w-5 h-5 mr-2" />
