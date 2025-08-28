@@ -26,6 +26,9 @@ import Head from "next/head";
 export const metadata: Metadata = {
   title:
     "Jay's EZ Junk Removal | Junk Removal in Dallas, Red Oak & DFW | Same-Day Service",
+    icons: {
+    icon: "/images/favicon.png",
+  },
   description:
     "Affordable junk removal in Dallas, Red Oak & all of DFW. Same-day service, licensed & insured, eco-friendly disposal. Call 214-258-3511 for a free quote!",
   keywords: [
@@ -44,6 +47,7 @@ export const metadata: Metadata = {
     "licensed junk removal Red Oak",
     "insured junk removal Dallas",
   ],
+
   openGraph: {
     title: "Jay's EZ Junk Removal | Dallas, Red Oak & DFW",
     description:
@@ -51,7 +55,7 @@ export const metadata: Metadata = {
     url: "https://jaysezjunkremoval.com",
     images: [
       {
-        url: "/images/logowithblack.png",
+        url: "/images/favicon.png",
         width: 1200,
         height: 630,
         alt: "Jay's EZ Junk Removal Dallas Red Oak DFW",

@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     default: "Jay's EZ Junk Removal | Junk Removal in Dallas, Red Oak & DFW",
     template: "%s | Jay's EZ Junk Removal",
   },
+     icons: {
+    icon: "/images/favicon.png",
+  },
   description:
     "Same-day, affordable junk removal in Dallas, Red Oak & all of DFW. Eco-friendly, licensed & insured junk removal service. Call 214-258-3511 for FREE quote!",
   keywords: [
