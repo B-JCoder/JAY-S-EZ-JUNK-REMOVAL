@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jaysezjunkremoval.com//sitemap.xml
+Sitemap: https://jaysezjunkremoval.com/sitemap.xml
