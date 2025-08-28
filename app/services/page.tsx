@@ -29,194 +29,170 @@ import Image from "next/image";
 import { ContactForm } from "@/components/ContactForm";
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  title: "Junk Removal Services | Residential & Commercial | JAYS EZ JUNK REMOVAL",
-  description:
-    "Complete junk removal services: residential cleanouts, commercial debris, furniture removal, appliance pickup, electronics recycling, hoarding cleanup. USA & GTA coverage. Call 214-258-3511!",
+export const metadata = {
+  title: "Junk Removal Services in Dallas, Red Oak & DFW | Jay's EZ Junk Removal",
+  description: "Same-day junk removal services in Dallas, Red Oak & all of DFW. Affordable & fast junk hauling by Jay's EZ Junk Removal. Call 214-258-3511 for free quote!",
   keywords: [
-    "junk removal services",
-    "residential junk removal",
-    "commercial junk removal",
-    "furniture removal service",
-    "appliance pickup",
-    "construction debris removal",
-    "electronics recycling service",
-    "hoarding cleanup service",
-    "estate cleanout service",
-    "garage cleanout",
-    "basement cleanout",
-    "attic cleanout",
-    "office cleanout",
-    "retail space clearing",
-    "hot tub removal",
-    "piano removal",
-    "exercise equipment removal",
-    "moving junk removal",
-    "foreclosure cleanout",
-    "specialty item removal",
+    "junk removal services in Dallas, TX",
+    "junk removal service Red Oak, TX",
+    "junk removal service DFW",
+    "same-day junk removal",
+    "emergency junk pickup",
+    "best junk removal company near me",
+    "affordable junk removal Dallas",
+    "Jay's EZ Junk Removal"
   ],
+  alternates: { canonical: "https://jaysezjunkremoval.com/services" },
   openGraph: {
-    title: "Complete Junk Removal Services | JAYS EZ JUNK REMOVAL",
-    description:
-      "🏠 Residential & 🏢 Commercial junk removal services. Furniture, appliances, construction debris, electronics recycling, hoarding cleanup. USA & GTA. Call 214-258-3511",
+    title: "Same-Day Junk Removal Services Dallas & Red Oak | Jay's EZ Junk Removal",
+    description: "Fast, affordable junk removal services across DFW. Residential, commercial & emergency cleanouts.",
     url: "https://jaysezjunkremoval.com/services",
-    images: [
-      {
-        url: "/images/logowithblack.png",
-        width: 1200,
-        height: 630,
-        alt: "Jay's EZ Junk Removal Services - Complete junk removal solutions",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Complete Junk Removal Services | JAYS EZ JUNK REMOVAL",
-    description:
-      "🏠 Residential & 🏢 Commercial junk removal. Furniture, appliances, debris removal. USA & GTA coverage. Call 214-258-3511",
-  },
-  alternates: {
-    canonical: "https://jaysezjunkremoval.com/services",
-  },
-}
+    images: [{ url: "/images/logowithblack.png", width: 1200, height: 630 }]
+  }
+};
 
 
 export default function ServicesPage() {
  
-  const services = [
-    {
-      icon: Trash2,
-      title: "Junk Removal",
-      description:
-        "Home, garage, yard, and business junk gone fast. Complete cleanouts for residential and commercial properties.",
-      features: [
-        "Furniture removal",
-        "Appliance disposal",
-        "Yard waste cleanup",
-        "Office cleanouts",
-      ],
-    },
-    {
-      icon: Hammer,
-      title: "Demolition",
-      description:
-        "Interior teardown, shed removal, light demo work. Professional demolition services with proper cleanup.",
-      features: [
-        "Interior demolition",
-        "Shed removal",
-        "Deck teardown",
-        "Light structural work",
-      ],
-    },
-    {
-      icon: Building2,
-      title: "Dumpster Rental",
-      description:
-        "Drop-off, pick-up, and disposal included. You fill, we dump. Various sizes available for any project.",
-      features: [
-        "Multiple sizes",
-        "Flexible rental periods",
-        "Drop-off & pickup",
-        "Disposal included",
-      ],
-    },
-    {
-      icon: Zap,
-      title: "Skid Steer Work",
-      description:
-        "Light land clearing, debris pushing, grading. Heavy-duty equipment for challenging jobs.",
-      features: [
-        "Land clearing",
-        "Debris removal",
-        "Light grading",
-        "Material moving",
-      ],
-    },
-    {
-      icon: Home,
-      title: "Property Cleanouts",
-      description:
-        "Real estate, rental turnover, eviction junk removal. Complete property preparation services.",
-      features: [
-        "Estate cleanouts",
-        "Rental turnovers",
-        "Foreclosure cleanup",
-        "Moving assistance",
-      ],
-    },
-    {
-      icon: Building2,
-      title: "Construction Debris",
-      description:
-        "Post-project cleanup and haul-away service. Professional construction waste management.",
-      features: [
-        "Post-construction cleanup",
-        "Material disposal",
-        "Site preparation",
-        "Debris hauling",
-      ],
-    },
-    {
-      icon: Truck,
-      title: "Material Transport",
-      description:
-        "Gravel, mulch, materials delivered or removed. Reliable transportation for your materials.",
-      features: [
-        "Material delivery",
-        "Bulk transport",
-        "Equipment hauling",
-        "Supply runs",
-      ],
-    },
-    {
-      icon: Truck,
-      title: "Trailer Rentals",
-      description:
-        "Professional trailer rental services for your hauling needs. Various sizes and configurations available.",
-      features: [
-        "Multiple trailer sizes",
-        "Flexible terms",
-        "Professional equipment",
-        "Delivery available",
-      ],
-    },
-  ];
+const services = [
+  {
+    icon: Trash2,
+    title: "Junk Removal Services in Dallas & DFW",
+    description:
+      "Affordable junk removal services in Dallas, Red Oak & all of DFW. We handle furniture, appliances, yard waste & complete property cleanouts. Same-day junk removal available!",
+    features: [
+      "Furniture & appliance removal",
+      "Yard waste & debris cleanup",
+      "Residential & commercial cleanouts",
+      "Eco-friendly junk hauling Dallas",
+    ],
+  },
+  {
+    icon: Hammer,
+    title: "Professional Demolition Services",
+    description:
+      "Interior teardown, shed removal, and light demolition work across Dallas & Red Oak. Fast, reliable & insured demolition services.",
+    features: [
+      "Interior & exterior demolition",
+      "Shed & deck removal",
+      "Light structural work",
+      "Post-demo cleanup included",
+    ],
+  },
+  {
+    icon: Building2,
+    title: "Dumpster Rental Services",
+    description:
+      "Easy dumpster rentals in Dallas & DFW for home projects, renovations & cleanouts. Flexible rental periods with delivery & pickup included.",
+    features: [
+      "Multiple dumpster sizes",
+      "Drop-off & pickup service",
+      "Flexible rental terms",
+      "Disposal & recycling options",
+    ],
+  },
+  {
+    icon: Zap,
+    title: "Skid Steer & Heavy Equipment Work",
+    description:
+      "Heavy-duty skid steer work for land clearing, grading & debris removal. Serving Dallas, Red Oak & all DFW areas.",
+    features: [
+      "Land clearing & grading",
+      "Debris pushing & removal",
+      "Material moving",
+      "Professional operators",
+    ],
+  },
+  {
+    icon: Home,
+    title: "Property Cleanout Services",
+    description:
+      "Full property cleanouts for real estate, rental turnovers & eviction situations. Complete cleanout service in Dallas & Red Oak.",
+    features: [
+      "Estate & foreclosure cleanouts",
+      "Rental property turnovers",
+      "Eviction junk removal",
+      "Move-out cleanup services",
+    ],
+  },
+  {
+    icon: Building2,
+    title: "Construction Debris Removal",
+    description:
+      "Post-construction cleanup & debris hauling services for residential & commercial projects in DFW.",
+    features: [
+      "Site cleanup after construction",
+      "Material hauling & disposal",
+      "Bulk debris removal",
+      "Same-day service available",
+    ],
+  },
+  {
+    icon: Truck,
+    title: "Material Transport Services",
+    description:
+      "Reliable material delivery & transport services for gravel, mulch, and building materials across Dallas & Red Oak.",
+    features: [
+      "Material delivery & pickup",
+      "Bulk transport options",
+      "Equipment hauling",
+      "Flexible scheduling",
+    ],
+  },
+  {
+    icon: Truck,
+    title: "Trailer Rentals in Dallas & DFW",
+    description:
+      "Affordable trailer rentals for hauling, cleanup & moving projects. Various sizes & flexible rental terms available.",
+    features: [
+      "Multiple trailer sizes",
+      "Flexible rental options",
+      "Delivery & pickup service",
+      "Professional-grade equipment",
+    ],
+  },
+];
+
 
   const pricingPlans = [
-    {
-      title: "Basic Cleanout",
-      price: "Starting at $99",
-      description: "Perfect for small cleanouts and single-item removal",
-      features: [
-        "Up to 1/4 truck load",
-        "Basic furniture removal",
-        "Same-day service",
-        "Professional crew",
-      ],
-    },
-    {
-      title: "Full Trailer Load",
-      price: "Custom Quote",
-      description: "Complete cleanouts and large-scale removals",
-      features: [
-        "Full truck capacity",
-        "Complete property cleanouts",
-        "Multiple trips if needed",
-        "Disposal included",
-      ],
-    },
-    {
-      title: "Demolition Jobs",
-      price: "Custom Quote",
-      description: "Professional demolition and heavy-duty work",
-      features: [
-        "Site assessment",
-        "Professional equipment",
-        "Debris removal",
-        "Cleanup included",
-      ],
-    },
-  ];
+  {
+    title: "Basic Junk Removal",
+    price: "Starting at $99",
+    description:
+      "Perfect for small junk removal jobs in Dallas & DFW. Same-day pickup for furniture, appliances & light debris.",
+    features: [
+      "Up to 1/4 truck load",
+      "Small cleanouts & single items",
+      "Same-day service available",
+      "Licensed & insured crew",
+    ],
+  },
+  {
+    title: "Full Property Cleanouts",
+    price: "Custom Quote",
+    description:
+      "Complete cleanout services for homes, rentals & commercial properties in Dallas, Red Oak & DFW areas.",
+    features: [
+      "Full truck capacity included",
+      "Complete property cleanouts",
+      "Multiple trips if needed",
+      "Eco-friendly disposal options",
+    ],
+  },
+  {
+    title: "Demolition & Heavy-Duty Jobs",
+    price: "Custom Quote",
+    description:
+      "Professional demolition, site clearing & heavy-duty junk removal across DFW.",
+    features: [
+      "Site assessment included",
+      "Professional demolition equipment",
+      "Debris hauling & disposal",
+      "Cleanup after demolition",
+    ],
+  },
+];
+
 
   return (
     <div className="min-h-screen gradient-bg text-white">
@@ -285,44 +261,34 @@ export default function ServicesPage() {
       </header>
 
       {/* Hero Section */}
-      <ParallaxBackground className="py-20 min-h-[60vh] flex items-center">
-        <div className="container mx-auto px-10 md:px-60 text-center w-full">
-          <AnimatedSection animation="fadeInUp">
-            <ParallaxContainer speed={0.2}>
-              <h1 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-6">
-                All-In-One <span className="text-neon">Junk & Hauling</span>
-                <br />
-                Solutions Across DFW
-              </h1>
-            </ParallaxContainer>
-            <ParallaxContainer speed={0.3} direction="down">
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Professional junk removal, demolition, and hauling services for
-                residential and commercial clients throughout the Dallas-Fort
-                Worth metroplex.
-              </p>
-            </ParallaxContainer>
-          </AnimatedSection>
+<section className="relative py-16 sm:py-20 min-h-[60vh] flex items-center overflow-hidden bg-black">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-20 text-center w-full">
+    <div className="animate-fadeInUp">
+      
+      {/* Heading */}
+      <h1 className="text-2xl sm:text-4xl lg:text-6xl font-black text-white leading-snug mb-6">
+        Affordable <span className="text-neon">Junk Removal & Hauling</span>
+        <br className="hidden sm:block" />
+        Services Across Dallas & DFW
+      </h1>
 
-          {/* Floating background elements */}
-          <ParallaxContainer
-            speed={0.5}
-            className="absolute top-20 left-10 w-20 h-20 bg-neon/10 rounded-full blur-2xl"
-            children={undefined}
-          />
-          <ParallaxContainer
-            speed={0.7}
-            direction="down"
-            className="absolute top-40 right-20 w-16 h-16 bg-blue-400/10 rounded-full blur-xl"
-            children={undefined}
-          />
-          <ParallaxContainer
-            speed={0.4}
-            className="absolute bottom-20 left-1/4 w-12 h-12 bg-green-400/10 rounded-full blur-lg"
-            children={undefined}
-          />
-        </div>
-      </ParallaxBackground>
+      {/* Paragraph */}
+      <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-2 sm:px-0 leading-relaxed">
+        Same-day junk removal, demolition, and hauling services for homes and 
+        businesses throughout Dallas, Red Oak, and the entire DFW metroplex. 
+        Fast, reliable, and eco-friendly solutions at competitive prices.
+      </p>
+
+    </div>
+  </div>
+
+  {/* Background elements (static glow) */}
+  <div className="absolute top-12 left-6 sm:left-10 w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 bg-neon/10 rounded-full blur-2xl" />
+  <div className="absolute top-32 right-8 sm:right-16 w-10 sm:w-14 md:w-16 h-10 sm:h-14 md:h-16 bg-blue-400/10 rounded-full blur-xl" />
+  <div className="absolute bottom-12 left-1/4 w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 bg-green-400/10 rounded-full blur-lg" />
+</section>
+
+
 
       {/* Services Grid */}
       <section className="py-16">
